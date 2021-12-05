@@ -1,0 +1,40 @@
+li:last-child {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+ul {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+li {
+  display: flex;
+  margin: 1px;
+  padding: 5px;
+}
+
+p {
+  text-align: center;
+  margin-top: 0;
+}
+
+.span {
+  margin-right: 10%;
+}
+
+.navbar-top {
+  color: white;
+  background: #535c4f;
+}
+
+.navbar-bottom {
+  margin-right: 3%;
+  margin-left: 3%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
