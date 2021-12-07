@@ -23,6 +23,9 @@ const ProductList = () => {
         className="ui container"
         style={{ paddingLeft: "10%", paddingRight: "10%" }}
       >
+        {/* <div className="ui success message">
+          <div className="header">Item sudah di tambah ke Cart</div>
+        </div> */}
         <div className="ui centered grid">{renderProducts}</div>
       </div>
     </div>

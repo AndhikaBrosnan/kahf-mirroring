@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../style/Navbar.css";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchCartData } from "../../redux/action/cart";
 
 const Navbar = () => {
+  const carts = useSelector((state) => state.carts);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    fetchCartData(dispatch); // eslint-disable-next-line
+  }, []);
+
   return (
     <div>
       <div className="navbar-top">
@@ -12,7 +20,7 @@ const Navbar = () => {
           <li>
             <Link to="/cart" style={{ color: "white" }}>
               <span>
-                <i className="icon shopping cart"></i> (0) | &nbsp;
+                <i className="icon shopping cart"></i> ({carts.length}) | &nbsp;
               </span>
             </Link>
             <span>

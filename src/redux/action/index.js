@@ -21,3 +21,19 @@ export const fetchCart = async () => {
     };
   }
 };
+
+export const postCart = async (name, image) => {
+  let newCart = {
+    name,
+    image,
+  };
+
+  try {
+    const response = await apiBackend.post("cart", newCart);
+    return response.data;
+  } catch (err) {
+    return {
+      message: "Error on Post Cart",
+    };
+  }
+};

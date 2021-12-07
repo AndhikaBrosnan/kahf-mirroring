@@ -12,8 +12,6 @@ const CartList = () => {
     fetchCartData(dispatch); // eslint-disable-next-line
   }, []);
 
-  
-
   const renderCart = carts.map((item, index) => {
     return <Cart key={index} nama={item.name} image={item.image} />;
   });
