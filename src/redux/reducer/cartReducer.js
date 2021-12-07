@@ -2,12 +2,12 @@ import { FETCH_CART } from "../type/cart";
 
 const INIT_STATE = [];
 
-const cartReducer = (cart = INIT_STATE, action) => {
-  switch (action.payload) {
+const cartReducer = (carts = INIT_STATE, action) => {
+  switch (action.type) {
     case FETCH_CART:
-      return [...cart, ...action.payload];
+      return [...carts, ...action.payload];
     default:
-      return cart;
+      return carts;
   }
 };
 

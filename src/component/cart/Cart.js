@@ -1,6 +1,6 @@
 import React from "react";
 
-const CartList = () => {
+const Cart = ({ nama, image }) => {
   return (
     <div>
       <div className="ui grid middle aligned">
@@ -8,11 +8,11 @@ const CartList = () => {
           <img
             style={{ width: "100%", paddingBottom: "1%" }}
             alt=""
-            src="https://www.kahfeveryday.com/wp-content/uploads/2021/07/11.jpg"
+            src={image}
           />
         </div>
         <div className="thirteen wide column">
-          <b>KAHF WFH KIT - REVERED OUD SERIES</b>
+          <b>{nama}</b>
         </div>
       </div>
       <div className="ui divider"></div>
@@ -20,4 +20,4 @@ const CartList = () => {
   );
 };
 
-export default CartList;
+export default Cart;
