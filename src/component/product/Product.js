@@ -1,18 +1,12 @@
 import React from "react";
 
-const Product = () => {
+const Product = ({ nama, image }) => {
   return (
     <div className="four wide column">
-      <img
-        style={{ width: "100%", paddingBottom: "8%" }}
-        alt=""
-        src="https://www.kahfeveryday.com/wp-content/uploads/2021/07/11.jpg"
-      />
+      <img style={{ width: "100%", paddingBottom: "8%" }} alt="" src={image} />
 
       <div className="ui two column centered grid">
-        <p style={{ fontSize: "10px", fontWeight: "bold" }}>
-          KAHF WFH KIT – REVERED OUD SERIES
-        </p>
+        <p style={{ fontSize: "10px", fontWeight: "bold" }}>{nama}</p>
         <button className="ui secondary button " style={{ fontSize: "65%" }}>
           ADD TO CART
         </button>

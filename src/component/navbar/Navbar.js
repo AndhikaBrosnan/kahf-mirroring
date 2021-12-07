@@ -18,7 +18,12 @@ const Navbar = () => {
             <span>
               <i className="icon heart"></i> (0) | &nbsp;
             </span>
-            <span></span> <i className="icon user"></i> LOGIN
+            <Link to="/login" style={{ color: "white" }}>
+              <span>
+                {" "}
+                <i className="icon user"></i> LOGIN
+              </span>
+            </Link>
           </li>
         </ul>
       </div>
@@ -32,16 +37,32 @@ const Navbar = () => {
           src="https://www.kahfeveryday.com/wp-content/uploads/2020/07/logo_kahf-1.png"
         />
         <ul>
-          <li style={{ marginRight: "2%" }}>HOME</li>
+          <li style={{ marginRight: "2%" }}>
+            <Link to="/home" style={{ color: "black" }}>
+              HOME
+            </Link>
+          </li>
 
           <li style={{ marginRight: "2%" }}>
             <Link to="/" style={{ color: "black" }}>
               SHOP
             </Link>
           </li>
-          <li style={{ marginRight: "2%" }}>BRAND</li>
-          <li style={{ marginRight: "2%" }}>KAHF PROGRAM</li>
-          <li>DISCOVERY</li>
+          <li style={{ marginRight: "2%" }}>
+            <Link to="/brand" style={{ color: "black" }}>
+              BRAND
+            </Link>
+          </li>
+          <li style={{ marginRight: "2%" }}>
+            <Link to="/program" style={{ color: "black" }}>
+              KAFH PROGRAM
+            </Link>
+          </li>
+          <li>
+            <Link to="/discovery" style={{ color: "black" }}>
+              DISCOVERY
+            </Link>
+          </li>
 
           <li>
             <div className="ui icon input">
