@@ -1,4 +1,5 @@
 import apiBackend from "../../api/apiBackend";
+import { credential } from "../../api/dummyCreds";
 
 export const fetchProducts = async () => {
   try {
@@ -36,4 +37,9 @@ export const postCart = async (name, image) => {
       message: "Error on Post Cart",
     };
   }
+};
+
+export const fetchCreds = () => {
+  const response = credential;
+  return response;
 };

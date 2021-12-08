@@ -11,6 +11,8 @@ const Navbar = () => {
     fetchCartData(dispatch); // eslint-disable-next-line
   }, []);
 
+  const login = useSelector((state) => state.login);
+
   return (
     <div>
       <div className="navbar-top">
@@ -29,7 +31,7 @@ const Navbar = () => {
             <Link to="/login" style={{ color: "white" }}>
               <span>
                 {" "}
-                <i className="icon user"></i> LOGIN
+                <i className="icon user"></i> {login ? "BROSNAN" : "LOGIN"}
               </span>
             </Link>
           </li>

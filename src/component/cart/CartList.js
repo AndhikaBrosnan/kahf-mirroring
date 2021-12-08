@@ -24,11 +24,7 @@ const CartList = () => {
         style={{ paddingLeft: "10%", paddingRight: "10%" }}
       >
         <h3 style={{ marginBottom: "4%" }}>SHOPPING CART</h3>
-        {renderCart}
-        {/* <Cart />
-        <Cart />
-        <Cart />
-        <Cart /> */}
+        {carts.length > 0 ? renderCart : <h5>Shopping Cart is empty..</h5>}
       </div>
     </div>
   );
