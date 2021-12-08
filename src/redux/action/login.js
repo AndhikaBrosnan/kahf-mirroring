@@ -7,7 +7,7 @@ export const postLoginData = async (dispatch, email, password) => {
     dispatch({ type: LOG_IN, payload: response });
   } else {
     return {
-      message: "Error on Login!",
+      message: "Login Failed!",
     };
   }
 };

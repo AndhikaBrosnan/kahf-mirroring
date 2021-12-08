@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { fetchCartData } from "../../redux/action/cart";
 import Navbar from "../navbar/Navbar";
 import Cart from "./Cart";
@@ -25,6 +26,9 @@ const CartList = () => {
       >
         <h3 style={{ marginBottom: "4%" }}>SHOPPING CART</h3>
         {carts.length > 0 ? renderCart : <h5>Shopping Cart is empty..</h5>}
+        <Link to="/">
+          <i class="arrow left icon"></i>Go back to shopping
+        </Link>
       </div>
     </div>
   );
