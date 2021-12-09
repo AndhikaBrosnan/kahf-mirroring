@@ -17,7 +17,7 @@ const Login = () => {
     postLoginData(dispatch, email, password);
     if (!email) {
       setError("Email Kosong");
-    } else if (!login) {
+    } else if (Object.keys(login).length === 0) {
       setError("Email atau password tidak sesuai");
     }
   };
