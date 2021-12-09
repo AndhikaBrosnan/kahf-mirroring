@@ -8,26 +8,40 @@ const Signup = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const history = useHistory();
   const login = useSelector((state) => state.login);
 
   const onSignup = () => {
-    localStorage.setItem(name, name);
-    localStorage.setItem(email, email);
-    localStorage.setItem(email + password, password);
+    // validasi
+    if (!name && !email && !password) {
+      setError("Harap mengisi kolom diatas.");
+    } else if (!name) {
+      setError("Kolom nama belum terisi.");
+    } else if (!email) {
+      setError("Kolom email belum terisi.");
+    } else if (!password) {
+      setError("Kolom password belum terisi.");
+    } else if (password.length < 8) {
+      setError("Password harus lebih dari 8 karakter.");
+    } else {
+      localStorage.setItem(email + name, name);
+      localStorage.setItem(email, email);
+      localStorage.setItem(email + password, password);
 
-    setName("");
-    setEmail("");
-    setPassword("");
+      setName("");
+      setEmail("");
+      setPassword("");
 
-    history.push("/login");
+      history.push("/login");
+    }
   };
 
   return (
     <div>
       <Navbar />
       <div className="ui container">
-        {!login ? (
+        {Object.keys(login).length === 0 ? (
           <div>
             <img
               style={{ height: "9%" }}
@@ -80,7 +94,7 @@ const Signup = () => {
                     </div>
                   </div>
 
-                  {/* <span className="ui error red header">{error}</span> */}
+                  <span className="ui error red header">{error}</span>
                   <button
                     style={{ width: "100%", marginBottom: "3%" }}
                     className="ui secondary button"

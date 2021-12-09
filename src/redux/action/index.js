@@ -1,5 +1,4 @@
 import apiBackend from "../../api/apiBackend";
-// import { credential } from "../../api/dummyCreds";
 
 export const fetchProducts = async () => {
   try {
@@ -40,9 +39,9 @@ export const postCart = async (name, image) => {
 };
 
 export const fetchCreds = (email, password) => {
-  // const response = credential;
   const email_cred = localStorage.getItem(email);
   const password_cred = localStorage.getItem(email + password);
+
   const response = {
     email: email_cred,
     password: password_cred,

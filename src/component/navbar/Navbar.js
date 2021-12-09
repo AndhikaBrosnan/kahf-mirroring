@@ -31,39 +31,37 @@ const Navbar = () => {
             <Link to="/login" style={{ color: "white" }}>
               <span>
                 {" "}
-                <i className="icon user"></i> {login ? "BROSNAN" : "LOGIN"}
+                <i className="icon user"></i>{" "}
+                {Object.keys(login).length !== 0 ? login.email : "LOGIN"}
               </span>
             </Link>
           </li>
         </ul>
       </div>
-      <div
-        className="navbar-bottom"
-        style={{ paddingTop: "2%", paddingBottom: "1%" }}
-      >
+      <div className="navbar-bottom">
         <img
-          style={{ position: "absolute", width: "6%", paddingTop: "0.5%" }}
+          className="img-nav-bot"
           alt=""
           src="https://www.kahfeveryday.com/wp-content/uploads/2020/07/logo_kahf-1.png"
         />
         <ul>
-          <li style={{ marginRight: "2%" }}>
+          <li className="li-menu">
             <Link to="/home" style={{ color: "black" }}>
               HOME
             </Link>
           </li>
 
-          <li style={{ marginRight: "2%" }}>
+          <li className="li-menu">
             <Link to="/" style={{ color: "black" }}>
               SHOP
             </Link>
           </li>
-          <li style={{ marginRight: "2%" }}>
+          <li className="li-menu">
             <Link to="/brand" style={{ color: "black" }}>
               BRAND
             </Link>
           </li>
-          <li style={{ marginRight: "2%" }}>
+          <li className="li-menu">
             <Link to="/program" style={{ color: "black" }}>
               KAFH PROGRAM
             </Link>

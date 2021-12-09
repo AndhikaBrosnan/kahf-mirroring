@@ -15,7 +15,9 @@ const Login = () => {
 
   const onLogin = () => {
     postLoginData(dispatch, email, password);
-    if (!login) {
+    if (!email) {
+      setError("Email Kosong");
+    } else if (!login) {
       setError("Email atau password tidak sesuai");
     }
   };
@@ -24,10 +26,10 @@ const Login = () => {
     <div>
       <Navbar />
       <div className="ui container">
-        {!login ? (
+        {Object.keys(login).length === 0 ? (
           <div>
             <img
-              style={{ height: "9%" }}
+              className="back-img"
               id="perfume"
               alt=""
               src="https://www.kahfeveryday.com/wp-content/uploads/2021/07/kahf_login.jpg"
@@ -40,7 +42,7 @@ const Login = () => {
                   <div style={{ marginBottom: "3%" }}>
                     <b>Email</b>
                     <div className="description">
-                      <div className="ui input" style={ { width: "100%" }}>
+                      <div className="ui input" style={{ width: "100%" }}>
                         <input
                           type="text"
                           onChange={(event) => setEmail(event.target.value)}
@@ -104,7 +106,12 @@ const Login = () => {
             </div>
           </div>
         ) : (
-          <h4>Kamu sudah login</h4>
+          <div>
+            <h3>Kamu berhasil login</h3>
+            <Link to="/">
+              <i class="arrow left icon"></i>Go back to shopping
+            </Link>
+          </div>
         )}
       </div>
     </div>

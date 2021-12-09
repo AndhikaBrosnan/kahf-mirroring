@@ -35,6 +35,16 @@ p {
 .navbar-bottom {
   margin-right: 3%;
   margin-left: 3%;
-  padding-top: 1%;
+  padding-top: 2%;
   padding-bottom: 1%;
+}
+
+.img-nav-bot {
+  position: absolute;
+  width: 6%;
+  padding: 0.5%;
+}
+
+.li-menu {
+  margin-right: 2%;
 }
