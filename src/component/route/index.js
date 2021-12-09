@@ -7,6 +7,7 @@ import Discovery from "../discovery/Discovery";
 import Program from "../program/Program";
 import Brand from "../brand/Brand";
 import Login from "../login/Login";
+import Signup from "../login/Signup";
 
 const Routes = () => {
   return (
@@ -20,6 +21,7 @@ const Routes = () => {
           <Route path="/discovery" component={Discovery}></Route>
           <Route path="/program" component={Program}></Route>
           <Route path="/brand" component={Brand}></Route>
+          <Route path="/signup" component={Signup}></Route>
         </div>
       </BrowserRouter>
     </div>

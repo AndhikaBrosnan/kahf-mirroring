@@ -15,3 +15,14 @@
   width: 50%;
   height: 50%;
 }
+
+.sign-up {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-button {
+  color: #75a74d;
+}
