@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "../navbar/Navbar";
 import "../../style/Login.css";
 import { Link } from "react-router-dom";
 import { postLoginData } from "../../redux/action/login";
@@ -24,7 +23,6 @@ const Login = () => {
 
   return (
     <div>
-      <Navbar />
       <div className="ui container">
         {Object.keys(login).length === 0 ? (
           <div>

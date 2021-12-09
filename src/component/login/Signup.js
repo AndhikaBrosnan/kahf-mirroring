@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "../navbar/Navbar";
 import "../../style/Login.css";
 import { Link, useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -39,7 +38,6 @@ const Signup = () => {
 
   return (
     <div>
-      <Navbar />
       <div className="ui container">
         {Object.keys(login).length === 0 ? (
           <div>

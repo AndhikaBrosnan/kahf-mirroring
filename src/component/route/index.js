@@ -8,12 +8,14 @@ import Program from "../program/Program";
 import Brand from "../brand/Brand";
 import Login from "../login/Login";
 import Signup from "../login/Signup";
+import Navbar from "../navbar/Navbar";
 
 const Routes = () => {
   return (
     <div>
       <BrowserRouter>
         <div>
+          <Navbar />
           <Route path="/" exact component={ProductList}></Route>
           <Route path="/login" exact component={Login}></Route>
           <Route path="/cart" component={CartList}></Route>

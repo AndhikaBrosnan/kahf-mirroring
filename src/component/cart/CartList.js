@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { fetchCartData } from "../../redux/action/cart";
-import Navbar from "../navbar/Navbar";
 import Cart from "./Cart";
 
 const CartList = () => {
@@ -19,7 +18,6 @@ const CartList = () => {
 
   return (
     <div>
-      <Navbar />
       <div
         className="ui container"
         style={{ paddingLeft: "10%", paddingRight: "10%" }}

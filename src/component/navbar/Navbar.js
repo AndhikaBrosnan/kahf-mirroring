@@ -6,12 +6,11 @@ import { fetchCartData } from "../../redux/action/cart";
 
 const Navbar = () => {
   const carts = useSelector((state) => state.carts);
+  const login = useSelector((state) => state.login);
   const dispatch = useDispatch();
   useEffect(() => {
     fetchCartData(dispatch); // eslint-disable-next-line
   }, []);
-
-  const login = useSelector((state) => state.login);
 
   return (
     <div>

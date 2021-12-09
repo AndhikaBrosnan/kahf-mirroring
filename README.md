@@ -1,12 +1,13 @@
 # Kahf Mirroring: Mini Challenge
 
-## Mirroring UI template of Kahf Website
+## Web Application that mirrors some of [kahfeveryday.com](https://www.kahfeveryday.com/) features.
 
 ### How to install
 
 - make sure you have NPM & Node installed
-- git clone this repository
-- npm install
+- git clone [this repository](https://github.com/AndhikaBrosnan/kahf-mirroring.git)
+- `npm install` to install node
+- `npm start` to run the app
 
 ### How to use
 
